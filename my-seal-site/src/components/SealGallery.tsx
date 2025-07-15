@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { SealImage } from './SealImage';
 import './SealGallery.css';
 
@@ -9,7 +9,7 @@ interface Seal {
   caption: string;
 }
 
-export const SealGallery: React.FC = () => {
+export const SealGallery = () => {
   const [seals, setSeals] = useState<Seal[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

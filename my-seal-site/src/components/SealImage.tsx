@@ -1,4 +1,4 @@
-import React from 'react';
+// React import not needed with new JSX transform
 import './SealImage.css';
 
 interface SealImageProps {
@@ -7,7 +7,7 @@ interface SealImageProps {
   caption?: string;
 }
 
-export const SealImage: React.FC<SealImageProps> = ({ src, alt, caption }) => {
+export const SealImage = ({ src, alt, caption }: SealImageProps) => {
   return (
     <div className="seal-image-container">
       <div className="seal-image-frame">
