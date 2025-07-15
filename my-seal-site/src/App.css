@@ -286,23 +286,74 @@ body {
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
   .title {
-    font-size: 2em;
+    font-size: 1.8em;
+    margin: 10px 0;
+  }
+  
+  .header {
+    padding: 8px;
+  }
+  
+  .marquee-container {
+    font-size: 14px;
+    padding: 6px;
   }
   
   .nav {
     flex-direction: column;
     align-items: center;
+    gap: 8px;
   }
   
   .nav-btn {
-    width: 200px;
+    width: 90%;
+    max-width: 280px;
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+  
+  .main {
+    padding: 10px;
+  }
+  
+  .section {
+    margin: 0;
+    padding: 15px;
+    border-radius: 10px;
   }
   
   .types-container {
     grid-template-columns: 1fr;
+    gap: 15px;
   }
   
   .gallery {
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .gallery-item {
+    width: 80px;
+    height: 80px;
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5em;
+  }
+  
+  .nav-btn {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  .section {
+    padding: 10px;
+  }
+  
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
 } 

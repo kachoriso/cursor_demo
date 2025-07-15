@@ -200,4 +200,103 @@
 @keyframes celebration {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.1); }
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .lucky-seal-container {
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  .slot-machine {
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 90%;
+  }
+  
+  .seal-display {
+    padding: 20px;
+    min-height: 150px;
+  }
+  
+  .seal-name {
+    font-size: 1.6em;
+  }
+  
+  .seal-emoji {
+    font-size: 3em;
+  }
+  
+  .lucky-seal-image {
+    width: 150px;
+    height: 120px;
+  }
+  
+  .lucky-button {
+    padding: 12px 24px;
+    font-size: 1.2em;
+    width: 90%;
+    max-width: 250px;
+  }
+  
+  .lucky-description {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lucky-seal-container {
+    padding: 15px;
+    margin: 5px;
+  }
+  
+  .slot-machine {
+    padding: 15px;
+    margin: 10px auto;
+  }
+  
+  .seal-display {
+    padding: 15px;
+    min-height: 120px;
+  }
+  
+  .seal-name {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
+  
+  .seal-emoji {
+    font-size: 2.5em;
+    margin: 15px 0;
+  }
+  
+  .lucky-seal-image {
+    width: 120px;
+    height: 100px;
+  }
+  
+  .lucky-button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    width: 95%;
+  }
+  
+  .lucky-description {
+    font-size: 1em;
+  }
+  
+  .seal-description {
+    font-size: 1em;
+  }
+  
+  .lucky-result {
+    padding: 15px;
+  }
+  
+  .fortune-message {
+    padding: 12px;
+    font-size: 0.9em;
+  }
 } 
