@@ -1,0 +1,46 @@
+.seal-gallery {
+  padding: 20px;
+  background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.loading-message {
+  text-align: center;
+  padding: 40px;
+  font-family: "Comic Sans MS", cursive;
+  color: #00838f;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  margin: 20px auto;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #00838f;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.error-message {
+  text-align: center;
+  color: #ff4081;
+  font-family: "Comic Sans MS", cursive;
+  background: rgba(255, 64, 129, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px 0;
+  border: 2px dashed #ff4081;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} 

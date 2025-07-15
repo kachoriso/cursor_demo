@@ -1,0 +1,32 @@
+.seal-image-container {
+  margin: 20px;
+  text-align: center;
+}
+
+.seal-image-frame {
+  border: 3px solid #ff6b6b;
+  padding: 10px;
+  background: linear-gradient(45deg, #ffd1d1, #fff);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+}
+
+.seal-image-frame:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.seal-image {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #999;
+}
+
+.seal-image-caption {
+  font-family: "Comic Sans MS", cursive;
+  color: #ff4081;
+  margin-top: 10px;
+  font-size: 1.1em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+} 
