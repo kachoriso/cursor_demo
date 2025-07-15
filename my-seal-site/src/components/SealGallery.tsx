@@ -24,10 +24,25 @@ export const SealGallery = ({ sealTypes }: SealGalleryProps) => {
 
   // 画像が存在するアザラシのマッピング
   const imageMapping: { [key: string]: string } = {
-    'ゴマフアザラシ': '/images/harbor-seal.jpg',
-    'ワモンアザラシ': '/images/ringed-seal.jpg',
+    'ズキンアザラシ': '/images/hooded-seal.jpg',
+    'アゴヒゲアザラシ': '/images/bearded-seal.jpg',
+    'ハイイロアザラシ': '/images/grey-seal.jpg',
     'クラカケアザラシ': '/images/ribbon-seal.jpg',
-    'ゼニガタアザラシ': '/images/spotted-seal.jpg'
+    'ヒョウアザラシ': '/images/leopard-seal.jpg',
+    'ウェッデルアザラシ': '/images/weddell-seal.jpg',
+    'カニクイアザラシ': '/images/crabeater-seal.jpg',
+    'キタゾウアザラシ': '/images/northern-elephant-seal.jpg',
+    'ミナミゾウアザラシ': '/images/southern-elephant-seal.jpg',
+    'チチュウカイモンクアザラシ': '/images/mediterranean-monk-seal.jpg',
+    'ハワイモンクアザラシ': '/images/hawaiian-monk-seal.jpg',
+    'カリブモンクアザラシ': '/images/caribbean-monk-seal.jpg',
+    'ロスアザラシ': '/images/ross-seal.jpg',
+    'タテゴトアザラシ': '/images/harp-seal.jpg',
+    'ゴマフアザラシ': '/images/harbor-seal.jpg',
+    'ゼニガタアザラシ': '/images/spotted-seal.jpg',
+    'カスピカイアザラシ': '/images/caspian-seal.jpg',
+    'ワモンアザラシ': '/images/ringed-seal.jpg',
+    'バイカルアザラシ': '/images/baikal-seal.jpg'
   };
 
   useEffect(() => {
