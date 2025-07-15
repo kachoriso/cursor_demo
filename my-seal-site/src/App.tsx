@@ -59,16 +59,10 @@ function App() {
             📚 豆知識
           </button>
           <button 
-            className={`nav-btn ${currentSection === 'types' ? 'active' : ''}`}
-            onClick={() => setCurrentSection('types')}
-          >
-            🔍 種類
-          </button>
-          <button 
             className={`nav-btn ${currentSection === 'gallery' ? 'active' : ''}`}
             onClick={() => setCurrentSection('gallery')}
           >
-            🖼️ ギャラリー
+            🖼️ 種類・ギャラリー
           </button>
           <button 
             className={`nav-btn ${currentSection === 'lucky' ? 'active' : ''}`}
@@ -113,23 +107,9 @@ function App() {
           </div>
         )}
 
-        {currentSection === 'types' && (
-          <div className="section">
-            <h2>🔍 アザラシの種類</h2>
-            <div className="types-container">
-              {sealTypes.map((seal, index) => (
-                <div key={index} className="type-box">
-                  <h3>{seal.name}</h3>
-                  <p>{seal.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
         {currentSection === 'gallery' && (
           <div className="section">
-            <SealGallery />
+            <SealGallery sealTypes={sealTypes} />
           </div>
         )}
 
