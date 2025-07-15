@@ -1,0 +1,192 @@
+.lucky-seal-container {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(45deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+  border-radius: 15px;
+  margin: 20px;
+  border: 3px solid #ff6b9d;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.lucky-seal-container h2 {
+  font-family: "Comic Sans MS", cursive;
+  color: #d81b60;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  animation: rainbow-glow 3s infinite;
+}
+
+.lucky-description {
+  font-family: "Comic Sans MS", cursive;
+  color: #8e24aa;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.slot-machine {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 500px;
+  border: 4px solid #5c6bc0;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.seal-display {
+  background: #ffffff;
+  border: 3px solid #ff5722;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.seal-display.spinning {
+  animation: slot-shake 0.1s infinite;
+  background: linear-gradient(45deg, #ffeb3b, #ffc107, #ff9800);
+}
+
+.seal-card {
+  text-align: center;
+}
+
+.seal-name {
+  font-family: "Comic Sans MS", cursive;
+  color: #d32f2f;
+  font-size: 2em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.seal-emoji {
+  font-size: 4em;
+  margin: 20px 0;
+  animation: bounce 1s infinite;
+}
+
+.seal-description {
+  font-family: "Comic Sans MS", cursive;
+  color: #1976d2;
+  font-size: 1.1em;
+  margin-top: 15px;
+  line-height: 1.4;
+}
+
+.seal-placeholder {
+  text-align: center;
+  color: #666;
+}
+
+.placeholder-emoji {
+  font-size: 4em;
+  margin: 20px 0;
+  animation: pulse 2s infinite;
+}
+
+.lucky-button {
+  background: linear-gradient(45deg, #ff6b35, #f7931e);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 15px 30px;
+  font-size: 1.3em;
+  font-family: "Comic Sans MS", cursive;
+  font-weight: bold;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  border: 3px solid #e65100;
+}
+
+.lucky-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(45deg, #ff8a65, #ffb74d);
+}
+
+.lucky-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  animation: button-pulse 1s infinite;
+}
+
+.lucky-result {
+  margin-top: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  border-radius: 15px;
+  border: 3px solid #26a69a;
+  animation: result-appear 1s ease-out;
+}
+
+.congratulations h3 {
+  font-family: "Comic Sans MS", cursive;
+  color: #d84315;
+  margin-bottom: 15px;
+  animation: celebration 2s infinite;
+}
+
+.lucky-name {
+  font-size: 1.5em;
+  color: #1565c0;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.fortune-message {
+  margin-top: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  font-family: "Comic Sans MS", cursive;
+  color: #2e7d32;
+  font-style: italic;
+}
+
+/* アニメーション */
+@keyframes rainbow-glow {
+  0% { color: #d81b60; text-shadow: 2px 2px 4px rgba(216, 27, 96, 0.5); }
+  25% { color: #8e24aa; text-shadow: 2px 2px 4px rgba(142, 36, 170, 0.5); }
+  50% { color: #1976d2; text-shadow: 2px 2px 4px rgba(25, 118, 210, 0.5); }
+  75% { color: #388e3c; text-shadow: 2px 2px 4px rgba(56, 142, 60, 0.5); }
+  100% { color: #d81b60; text-shadow: 2px 2px 4px rgba(216, 27, 96, 0.5); }
+}
+
+@keyframes slot-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  75% { transform: translateX(2px); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes button-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes result-appear {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes celebration {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+} 

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { SealGallery } from './components/SealGallery'
+import { LuckySeal } from './components/LuckySeal'
 import './App.css'
 
 function App() {
@@ -69,6 +70,12 @@ function App() {
           >
             🖼️ ギャラリー
           </button>
+          <button 
+            className={`nav-btn ${currentSection === 'lucky' ? 'active' : ''}`}
+            onClick={() => setCurrentSection('lucky')}
+          >
+            🍀 ラッキーアザラシ
+          </button>
         </nav>
       </header>
 
@@ -123,6 +130,12 @@ function App() {
         {currentSection === 'gallery' && (
           <div className="section">
             <SealGallery />
+          </div>
+        )}
+
+        {currentSection === 'lucky' && (
+          <div className="section">
+            <LuckySeal sealTypes={sealTypes} />
           </div>
         )}
       </main>
