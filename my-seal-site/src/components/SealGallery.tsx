@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { SealImage } from './SealImage';
 import './SealGallery.css';
 
 interface SealType {
@@ -7,19 +6,11 @@ interface SealType {
   description: string;
 }
 
-interface SealWithImage {
-  id: number;
-  src: string;
-  alt: string;
-  caption: string;
-}
-
 interface SealGalleryProps {
   sealTypes: SealType[];
 }
 
 export const SealGallery = ({ sealTypes }: SealGalleryProps) => {
-  const [sealsWithImages, setSealsWithImages] = useState<SealWithImage[]>([]);
   const [loading, setLoading] = useState(true);
 
   // 画像が存在するアザラシのマッピング
@@ -46,35 +37,13 @@ export const SealGallery = ({ sealTypes }: SealGalleryProps) => {
   };
 
   useEffect(() => {
-    // 画像の存在を確認
-    const checkImages = async () => {
-      const imageData: SealWithImage[] = [];
-      
-      for (const [name, src] of Object.entries(imageMapping)) {
-        try {
-          const response = await fetch(src, { method: 'HEAD' });
-          if (response.ok) {
-            const sealType = sealTypes.find(seal => seal.name === name);
-            if (sealType) {
-              imageData.push({
-                id: imageData.length + 1,
-                src: src,
-                alt: name,
-                caption: sealType.description
-              });
-            }
-          }
-        } catch (error) {
-          console.log(`Image not found for ${name}:`, error);
-        }
-      }
-      
-      setSealsWithImages(imageData);
+    // シンプルに読み込み状態を管理
+    const timer = setTimeout(() => {
       setLoading(false);
-    };
+    }, 500);
 
-    checkImages();
-  }, [sealTypes]);
+    return () => clearTimeout(timer);
+  }, []);
 
   if (loading) {
     return (
