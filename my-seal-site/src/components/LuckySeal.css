@@ -71,6 +71,17 @@
   animation: bounce 1s infinite;
 }
 
+.lucky-seal-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 4px solid #ff5722;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+  margin: 20px 0;
+  animation: bounce 1s infinite;
+}
+
 .seal-description {
   font-family: "Comic Sans MS", cursive;
   color: #1976d2;

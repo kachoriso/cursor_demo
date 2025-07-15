@@ -89,31 +89,25 @@ export const SealGallery = ({ sealTypes }: SealGalleryProps) => {
 
   return (
     <div className="seal-gallery">
-      <h2 className="gallery-section-title">🖼️ 画像ギャラリー</h2>
-      {sealsWithImages.length > 0 ? (
-        <div className="gallery-grid">
-          {sealsWithImages.map(seal => (
-            <SealImage
-              key={seal.id}
-              src={seal.src}
-              alt={seal.alt}
-              caption={seal.caption}
-            />
-          ))}
-        </div>
-      ) : (
-        <p className="no-images-message">現在表示できる画像がありません。</p>
-      )}
-      
-      <h2 className="gallery-section-title">📚 全アザラシ種類一覧</h2>
+      <h2 className="gallery-section-title">🖼️ アザラシ図鑑</h2>
       <div className="types-container">
         {sealTypes.map((seal, index) => (
           <div key={index} className="type-box">
             <h3 className="type-name">{seal.name}</h3>
-            <p className="type-description">{seal.description}</p>
             {imageMapping[seal.name] && (
-              <span className="has-image-badge">📸 画像あり</span>
+              <div className="seal-image-container">
+                <img 
+                  src={imageMapping[seal.name]} 
+                  alt={seal.name}
+                  className="seal-type-image"
+                  onError={(e) => {
+                    console.log(`Failed to load image for ${seal.name}`);
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </div>
             )}
+            <p className="type-description">{seal.description}</p>
           </div>
         ))}
       </div>

@@ -11,6 +11,28 @@ interface LuckySealProps {
 }
 
 export const LuckySeal = ({ sealTypes }: LuckySealProps) => {
+  // 画像が存在するアザラシのマッピング
+  const imageMapping: { [key: string]: string } = {
+    'ズキンアザラシ': '/images/hooded-seal.jpg',
+    'アゴヒゲアザラシ': '/images/bearded-seal.jpg',
+    'ハイイロアザラシ': '/images/grey-seal.jpg',
+    'クラカケアザラシ': '/images/ribbon-seal.jpg',
+    'ヒョウアザラシ': '/images/leopard-seal.jpg',
+    'ウェッデルアザラシ': '/images/weddell-seal.jpg',
+    'カニクイアザラシ': '/images/crabeater-seal.jpg',
+    'キタゾウアザラシ': '/images/northern-elephant-seal.jpg',
+    'ミナミゾウアザラシ': '/images/southern-elephant-seal.jpg',
+    'チチュウカイモンクアザラシ': '/images/mediterranean-monk-seal.jpg',
+    'ハワイモンクアザラシ': '/images/hawaiian-monk-seal.jpg',
+    'カリブモンクアザラシ': '/images/caribbean-monk-seal.jpg',
+    'ロスアザラシ': '/images/ross-seal.jpg',
+    'タテゴトアザラシ': '/images/harp-seal.jpg',
+    'ゴマフアザラシ': '/images/harbor-seal.jpg',
+    'ゼニガタアザラシ': '/images/spotted-seal.jpg',
+    'カスピカイアザラシ': '/images/caspian-seal.jpg',
+    'ワモンアザラシ': '/images/ringed-seal.jpg',
+    'バイカルアザラシ': '/images/baikal-seal.jpg'
+  };
   const [isSpinning, setIsSpinning] = useState(false);
   const [luckySeal, setLuckySeal] = useState<SealType | null>(null);
   const [displaySeal, setDisplaySeal] = useState<SealType | null>(null);
@@ -54,7 +76,15 @@ export const LuckySeal = ({ sealTypes }: LuckySealProps) => {
           {displaySeal ? (
             <div className="seal-card">
               <h3 className="seal-name">{displaySeal.name}</h3>
-              <div className="seal-emoji">🦭</div>
+              {imageMapping[displaySeal.name] && !isSpinning ? (
+                <img 
+                  src={imageMapping[displaySeal.name]} 
+                  alt={displaySeal.name}
+                  className="lucky-seal-image"
+                />
+              ) : (
+                <div className="seal-emoji">🦭</div>
+              )}
               {!isSpinning && luckySeal && (
                 <p className="seal-description">{displaySeal.description}</p>
               )}
